@@ -46,6 +46,8 @@ private:
         account_name author;
         time ptime;
         time itime;
+        string targeturl;
+        string price;
 
         uint64_t primary_key() const { return id; }
     };
@@ -56,7 +58,7 @@ public:
     prabox( account_name self ) :
             contract( self ) {  }
 
-    void post( account_name creator, string content )
+    void post( account_name creator, string content , string targeturl , string price)
     {
         require_auth(creator);
 
@@ -71,8 +73,9 @@ public:
             newAd.id = id;
             newAd.content = content;
             newAd.author = creator;
-            newAd.ptime = now();
-            newAd.itime = now();
+            newAd.targeturl = targeturl;
+            newAd.price = price;
+            //newAd.itime = now();
         });
 
         store_config(conf);
@@ -82,7 +85,7 @@ public:
     {
         fancyAds fancyAd_table(_self, _self);
         auto it = fancyAd_table.find( id );
-        eosio_assert( it != fancyAd_table.end(), "moment with the id not found" );
+        eosio_assert( it != fancyAd_table.end(), "with the id not found" );
 
         require_auth(it->author);
 
