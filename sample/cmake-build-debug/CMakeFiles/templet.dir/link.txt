@@ -1,0 +1,1 @@
+/usr/local/wasm/bin/llvm-link -only-needed -o libtemplet.dylib CMakeFiles/templet.dir/hello/hello.cpp.o CMakeFiles/templet.dir/prabox/prabox.cpp.o CMakeFiles/templet.dir/more.moment/more.moment.cpp.o CMakeFiles/templet.dir/more.voting/more.voting.cpp.o

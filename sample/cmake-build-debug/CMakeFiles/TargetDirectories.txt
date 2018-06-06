@@ -1,0 +1,7 @@
+/Users/alex/Desktop/eos_poke_train/sample/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/alex/Desktop/eos_poke_train/sample/cmake-build-debug/CMakeFiles/assembly.dir
+/Users/alex/Desktop/eos_poke_train/sample/cmake-build-debug/CMakeFiles/abi.dir
+/Users/alex/Desktop/eos_poke_train/sample/cmake-build-debug/CMakeFiles/wast.dir
+/Users/alex/Desktop/eos_poke_train/sample/cmake-build-debug/CMakeFiles/wast2.dir
+/Users/alex/Desktop/eos_poke_train/sample/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/alex/Desktop/eos_poke_train/sample/cmake-build-debug/CMakeFiles/templet.dir

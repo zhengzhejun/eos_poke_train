@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+9c26724eb680fe47e0845546cef78229 CMakeFiles/assembly
+9c26724eb680fe47e0845546cef78229 CMakeFiles/wast
+9c26724eb680fe47e0845546cef78229 CMakeFiles/wast2
