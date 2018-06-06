@@ -2,16 +2,16 @@
 ## build and deploy
 ```shell
 $ eosiocpp -o contracts/more.moment/more.moment.wast contracts/more.moment/more.moment.cpp
-$ cleos set contract more.moment contracts/more.moment -p more.moment
+$ cleos set contract alex ../more.moment -p alex
 ```
 ## run
 ### Post
 ```shell
-$ cleos push action more.moment post '{"creator":"more","content":"it's a nice day"}' -p more
+$ cleos push action alex post '["alex","content-"]' -p alex
 ```
 ### View the table
 ```shell
-$ cleos get table more.moment more.moment mshare
+$ cleos get table alex alex mshare
 {
   "rows": [{
       "id": 1232,

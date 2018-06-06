@@ -33,3 +33,10 @@ void moment::remove(uint64_t id) {
 
     mshare_table.erase( it );
 }
+
+
+
+void moment::hello()
+{
+    eosio::print("");
+}

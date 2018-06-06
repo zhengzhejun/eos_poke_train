@@ -2,6 +2,7 @@
 #include<eosiolib/print.hpp>
 using namespace eosio;
 using namespace std;
+
 class hello :public eosio::contract {
 
       public:
@@ -12,7 +13,7 @@ class hello :public eosio::contract {
               eosio::print("Hello, ", eosio::name{user});
           }
 
-          void abi_add(uint64_t num1, uint64_t num2)
+          void abiadd(uint64_t num1, uint64_t num2)
           {
               eosio::print("add: ", add(num1, num2));
 
@@ -44,4 +45,4 @@ class hello :public eosio::contract {
   
  };
 
- EOSIO_ABI( hello,(hi)(abi_add)(mulargs))
+ EOSIO_ABI( hello,(hi)(abiadd)(mulargs))
