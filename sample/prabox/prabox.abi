@@ -13,11 +13,11 @@
           "name": "author",
           "type": "account_name"
         },{
-          "name": "ptime",
-          "type": "time"
+          "name": "targeturl",
+          "type": "string"
         },{
-          "name": "itime",
-          "type": "time"
+          "name": "price",
+          "type": "string"
         }
       ]
     }

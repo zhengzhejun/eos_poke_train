@@ -40,7 +40,7 @@ private:
     }
 
     // @abi table
-    struct fancyAd {
+    struct fancyad {
         uint64_t id;
         string content;
         account_name author;
@@ -52,7 +52,7 @@ private:
         uint64_t primary_key() const { return id; }
     };
 
-    typedef multi_index<N(fancyAd), fancyAd> fancyAds;
+    typedef multi_index<N(fancyad), fancyad> fancyads;
 
 public:
     prabox( account_name self ) :
@@ -63,14 +63,14 @@ public:
         require_auth(creator);
         //eosio:print("in post", content+ targeturl + price);
 
-        fancyAds fancyAd_table(_self, _self);
+        fancyads fancyad_table(_self, _self);
 
         config conf;
         get_config(conf);
 
         uint64_t id = conf.id++;
 
-        fancyAd_table.emplace( creator, [&]( auto& newAd ) {
+        fancyad_table.emplace( creator, [&]( auto& newAd ) {
             newAd.id = id;
             newAd.content = content;
             newAd.author = creator;
@@ -84,13 +84,13 @@ public:
 
     void remove( uint64_t id )
     {
-        fancyAds fancyAd_table(_self, _self);
-        auto it = fancyAd_table.find( id );
-        eosio_assert( it != fancyAd_table.end(), "with the id not found" );
+        fancyads fancyad_table(_self, _self);
+        auto it = fancyad_table.find( id );
+        eosio_assert( it != fancyad_table.end(), "with the id not found" );
 
         require_auth(it->author);
 
-        fancyAd_table.erase( it );
+        fancyad_table.erase( it );
     }
 };
 
