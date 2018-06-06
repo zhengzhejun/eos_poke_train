@@ -10,7 +10,7 @@ $ cleos set contract alex ../more.moment -p alex
 $ cleos push action alex post '["alex","content-"]' -p alex
 ```
 ### View the table
-```shell
+```shellmshare
 $ cleos get table alex alex mshare
 {
   "rows": [{

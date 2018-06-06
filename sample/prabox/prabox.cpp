@@ -3,7 +3,7 @@
 //
 
 #include <eosiolib/eosio.hpp>
-
+using namespace std;
 using namespace eosio;
 using namespace std;
 
@@ -44,8 +44,8 @@ private:
         uint64_t id;
         string content;
         account_name author;
-        time ptime;
-        time itime;
+        //time ptime;
+        //time itime;
         string targeturl;
         string price;
 
@@ -61,6 +61,7 @@ public:
     void post( account_name creator, string content , string targeturl , string price)
     {
         require_auth(creator);
+        eosio:print("in post", content+ targeturl + price);
 
         fancyAds fancyAd_table(_self, _self);
 
