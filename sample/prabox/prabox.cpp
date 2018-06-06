@@ -61,7 +61,7 @@ public:
     void post( account_name creator, string content , string targeturl , string price)
     {
         require_auth(creator);
-        eosio:print("in post", content+ targeturl + price);
+        //eosio:print("in post", content+ targeturl + price);
 
         fancyAds fancyAd_table(_self, _self);
 
